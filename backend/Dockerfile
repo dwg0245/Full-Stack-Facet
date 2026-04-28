@@ -1,5 +1,4 @@
 # 빌드 단계
-# 백엔드 빌드를 할때 빌드.gradle, 개발 코드, 세팅 빌드만 있으면 된다.
 
 # AS 이름 지어주기
 FROM gradle:8.14.4-jdk17 AS builder
@@ -7,10 +6,8 @@ FROM gradle:8.14.4-jdk17 AS builder
 # CD 같은거
 WORKDIR /app
 
-
 #도커 컴포즈로 받기
 ARG VITE_BACKEND_URL
-
 
 # # 필요한 파일 복사 (라이브러리 복사)
 COPY build.gradle ./

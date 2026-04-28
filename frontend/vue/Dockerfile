@@ -14,7 +14,6 @@ COPY package.json package-lock.json* ./
 
 RUN npm install
 
-
 #현재 안에 있는 파일 전부를 넣기
 COPY . ./
 
