@@ -56,7 +56,7 @@ services:
       dockerfile: Dockerfile
       # dockerfile에게 환경변수를 넘겨준다.
       args:
-        - VITE_BACKEND_URL=http://localhost:8080
+        - VITE_BACKEND_URL=${VITE_BACKEND_URL}
     ports:
       - "80:80"  # 나중에 인증서 하면 443번으로 하기
     depends_on:
